@@ -1,4 +1,5 @@
 <?php 
+//conexao com o banco de dados
     class Conexao{
         private $data = ["host" => "127.0.0.1",
         "database" => "formsphp",

@@ -1,7 +1,10 @@
 <?php
-
+//codigo que aparece se a sessao do usuario estiver atenticada para ele visualizar seus dados
+// e clicar em editar caso desejar
 $funcao_listar = new Funcoes();
 $array_dados_cliente = $funcao_listar->listar($_SESSION['id']);
+//caso o usuario clicar no botao "Deslogar", ele desloga e esse codigo destroi sua sessao
+// e volta a pagina inicial
 if(isset($_GET['logout']) && $_GET['logout']==1){
     $_SESSION = array();
     session_destroy();
@@ -31,4 +34,4 @@ if(isset($_GET['logout']) && $_GET['logout']==1){
             }
         ?>
     </table>
-    <button><a href="?logout=1">Voltar</a></button>
+    <button><a href="?logout=1">Deslogar</a></button>

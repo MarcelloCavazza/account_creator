@@ -1,10 +1,14 @@
 <?php
 
-
+//tanto o cod quanto a pagina só é carregado,caso o usuario entre
+//com a sessao autenticada no arquivo cliente_editar.php 
 $cliente_dados = new Funcoes;
+//pega qual o ID do usuario para fazer puxar os dados do usuario especifico
 if(isset($_GET["id_cliente"])){
     $array_dados_cliente = $cliente_dados->listar($_GET["id_cliente"]);
 }
+//verifica se todos os arquivos estao definidos e preenchidos para realizar o comando
+//de atualizar os dados no banco de dados e se der tudo certo ele volta a página dados_usario.php
 if(isset($_POST["nome_cliente"]) && !empty($_POST["nome_cliente"])
     && isset($_POST["email_cliente"]) && !empty($_POST["email_cliente"])
     && isset($_POST["telefone_cliente"]) && !empty($_POST["telefone_cliente"])
@@ -14,9 +18,12 @@ if(isset($_POST["nome_cliente"]) && !empty($_POST["nome_cliente"])
     $result = $cliente_dados->atualizar();       
     if($result == '1'){
         header('location: dados_usuario.php');
+    }else{
+        echo "<script>alert('Erro ao atualizar dados! Tente novamente ou contate o suporte.')</script>";
     }
 }
 ?>
+<!-- usando um foreach é printado os dados do cliente da sessao atual -->
 <div>
     <div>
         <div>
@@ -25,7 +32,7 @@ if(isset($_POST["nome_cliente"]) && !empty($_POST["nome_cliente"])
     </div=>
      <div class="row">
        <div class="col-lg-12">
-       <form action="cliente_editar.php" method="post">
+       <form action="cliente_editar.php" method="post" id="form">
             <?php
                 foreach($array_dados_cliente as $cliente_dados){
                     echo "
