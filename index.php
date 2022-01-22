@@ -26,19 +26,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Cadastro de usuário</title>
 </head>
 <body>
-    <button>
+    <button id="button-box">
         <a href="cadastrar.php">Clique aqui para criar uma conta!</a>    
     </button>
     <form method="post" action="index.php" id="form">
-        <label for="email">Insira seu e-mail:</label>
-        <input type="email" name="email" id="email">
-        <label for="senha">Insira sua senha:</label>
-        <input type="password" name="senha" id="senha">
-        <input type="submit" value="Entrar">
-        <input type="reset" value="Limpar campos">
+        <div><h1>Login</h1></div>
+        <div class="input">
+            <label for="email">Insira seu e-mail:</label><br>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="input" id="">
+            <label for="senha">Insira sua senha:</label><br>
+            <input type="password" name="senha" id="senha" required>
+        </div>
+        <div id="buttons-form">
+            <input type="submit" value="Entrar" class="btnforms">
+            <input type="reset" value="Limpar campos" class="btnforms">
+        </div>
     </form>
 </body>
 </html>
