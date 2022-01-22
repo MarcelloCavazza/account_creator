@@ -106,30 +106,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/mascaras.js"></script>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/cadastrar.css">
     <title>Cadastro</title>
 </head>
 <body>
-    <div>Insira seus dados para criar a conta</div>
-    <span id="message"></span>
+    <div id="title"><h1>Insira seus dados para criar a conta</h1></div>
     <form method="POST" action="cadastrar.php" id="form">
-        <label for="nome">Insira seu nome completo:</label>
-        <input type="text" name="nome_cliente" id="nome" placeholder="seu nome" required>
-        <span id="nome_error" class="text-danger"></span>
-        <label for="email">Insira e-mail:</label>
-        <input type="email" name="email_cliente" id="email" placeholder="seu email" required>
-        <span id="email_error" class="text-danger"></span>
-        <label for="telefone">Insira seu telefone:</label>
-        <input type="tel" name="telefone_cliente" id="telefone" placeholder="(31)99999-9999" oninput=mascara_telefone() maxlength="14" required>
-        <span id="tel_error" class="text-danger"></span>     
-        <label for="senha">Insira sua senha:</label>
-        <input type="password" name="senha_cliente" id="senha" placeholder="Insira sua senha" minlength="3" maxlength="255" required>
-        <span id="senha_error" class="text-danger"></span>
-        <label for="data">Insira sua data de nascimento:</label>
-        <input type="date" name="data_nasc_cliente" id="data" min="1900-01-01" placeholder="Insira sua data de nascimento" required>
-        <span id="date_error" class="text-danger"></span>
-        <input type="submit" value="Criar conta">
-        <input type="reset" value="Limpar campos">
+        <div  class="buttons-form">
+            <label for="nome">Insira seu nome completo:</label><br>
+            <input type="text" name="nome_cliente" id="nome" placeholder="seu nome" required>
+        </div>
+        <div  class="buttons-form">
+            <label for="email">Insira e-mail:</label><br>
+            <input type="email" name="email_cliente" id="email" placeholder="seu email" required>
+        </div>
+        <div  class="buttons-form">
+            <label for="telefone">Insira seu telefone:</label><br>
+            <input type="tel" name="telefone_cliente" id="telefone" placeholder="(31)99999-9999" oninput=mascara_telefone() maxlength="14" required>
+        </div>
+        <div  class="buttons-form">
+            <label for="senha">Insira sua senha:</label><br>
+            <input type="password" name="senha_cliente" id="senha" placeholder="Insira sua senha" minlength="3" maxlength="255" required>
+        </div>
+        <div  class="buttons-form">
+            <label for="data">Insira sua data de nascimento:</label><br>
+            <input type="date" name="data_nasc_cliente" id="data" min="1900-01-01" placeholder="Insira sua data de nascimento" required>
+        </div>
+        <div  class="buttons-form">
+            <input type="submit" value="Criar conta">
+            <input type="reset" value="Limpar campos">
+        </div>
     </form>
-    <button><a href="?logout=1">Voltar</a></button>
+    <button id="button-box"><a href="?logout=1">Voltar</a></button>
 </body>
 </html>

@@ -17,6 +17,8 @@ if($_SESSION['logged'] == true){
 <head>
     <meta charset="utf-8">
     <title>Editar dados</title>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/editar_conta.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>

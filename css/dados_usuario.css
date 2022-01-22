@@ -1,27 +1,35 @@
 body{
     display: flex;
     flex-direction: column;
-	align-content: center;
-	justify-content: center;
+    justify-content: center;
+    align-items: center;
 }
-h1{
-    color:#1b4a5f;
+table, th, td {
+    border: 0.05vw solid black;
+    border-collapse: collapse;
 }
-#form{
-    justify-self: center;
-    align-self: center;
-    margin-top: 5%;
-    border-radius: 1vw;
-    color: white;
+
+td{
+      text-align: center;
+      background-color: #808080;
+      padding-left:1vw ;
+      padding-right:1vw ;
+}
+th{
     background-color: #151515;
-    padding:5%;
-    padding-top: 1vw;
+    color: white;
+    padding: 1vw;
+}
+
+table{
+    margin-top:1vw;
+    margin-bottom:1vw;
 }
 #button-box{
     margin-top: 2%;
-    height: 10%;
+    height: 6%;
     align-self: center;
-    background-color: #E99536;
+    background-color: #e93636;
     border: none;
     border-radius: 3vw;
     padding: 15px 32px;
@@ -31,7 +39,7 @@ h1{
     transition-duration: 2s;
 }
 #button-box:hover{
-    background-color: #b4b4b4;
+    background-color: #a12727;
     
 }
 a{
@@ -49,14 +57,4 @@ a:visited{
 }
 a:link{
     color: white;
-}
-.input{
-    margin-top: 1vw;
-}
-#buttons-form{
-    margin-top: 1vw;
-    
-}
-.btnforms{
-    cursor: pointer;
 }

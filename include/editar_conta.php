@@ -27,7 +27,7 @@ if(isset($_POST["nome_cliente"]) && !empty($_POST["nome_cliente"])
 <div>
     <div>
         <div>
-            <h3>Editar Aluno</h3>
+            <h3 id="title">Editar Conta</h3>
         </div>
     </div=>
      <div class="row">
@@ -36,32 +36,32 @@ if(isset($_POST["nome_cliente"]) && !empty($_POST["nome_cliente"])
             <?php
                 foreach($array_dados_cliente as $cliente_dados){
                     echo "
-                    <div>
-                        <label for='nome_cliente'>Nome</label>
+                    <div class='buttons-form'>
+                        <label for='nome_cliente'>Nome</label><br>
                         <input type='text' name='nome_cliente' id='nome_cliente'value='{$cliente_dados[1]}'required>
                     </div>
-                    <div >
-                        <label for='email_cliente'>E-mail</label>
+                    <div class='buttons-form'>
+                        <label for='email_cliente'>E-mail</label><br>
                         <input type='email' name='email_cliente' id='email_cliente'value='{$cliente_dados[2]}' required>
                     </div>
-                    <div>
-                        <label for='senha_cliente'>Senha</label>
+                    <div class='buttons-form'>
+                        <label for='senha_cliente'>Senha</label><br>
                         <input type='text' name='senha_cliente' id='senha_cliente'value='{$cliente_dados[4]}' required>
                     </div>
-                    <div>
-                        <label for='data_nasc_cliente'>Data de Nasc</label>
+                    <div class='buttons-form'>
+                        <label for='data_nasc_cliente'>Data de Nasc</label><br>
                         <input type='text' name='data_nasc_cliente' id='data_nasc_cliente' value='{$cliente_dados[5]}' required>
                     </div>
-                    <div>
-                        <label for='telefone_cliente'>Telefone</label>
+                    <div class='buttons-form'>
+                        <label for='telefone_cliente'>Telefone</label><br>
                         <input type='text' name='telefone_cliente' id='telefone_cliente'value='{$cliente_dados[3]}' required>
                     </div>
                     ";
                 }
             ?>
-            <div>
-                <button type="submit" name="salvar" value="salvar">Salvar</button>
-                <button><a href="dados_usuario.php">Voltar</a></button>
+            <div class='buttons-form' id="botao-saida">
+                <input type="submit" name="salvar" value="Salvar" id="botao-final"></input>
+                <button class="botao-final"><a href="dados_usuario.php">Voltar</a></button>
             </div>
             </div>
         </form>

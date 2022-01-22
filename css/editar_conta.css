@@ -1,21 +1,35 @@
 body{
     display: flex;
     flex-direction: column;
-	align-content: center;
-	justify-content: center;
+    align-items: center;
 }
-h1{
-    color:#1b4a5f;
+#title{
+    text-align: center;
+    margin-top: 2vw;
 }
 #form{
+    display: flex;
+    flex-direction: column;
     justify-self: center;
-    align-self: center;
-    margin-top: 5%;
+    width: 100%;
+    margin-top: 3%;
     border-radius: 1vw;
     color: white;
     background-color: #151515;
-    padding:5%;
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom:2vw;
     padding-top: 1vw;
+}
+.buttons-form{
+    margin-top: 1vw;
+}
+#botao-final{
+    cursor: pointer;
+}
+#botao-saida{
+    display: flex;
+    flex-direction: column;
 }
 #button-box{
     margin-top: 2%;
@@ -31,32 +45,22 @@ h1{
     transition-duration: 2s;
 }
 #button-box:hover{
-    background-color: #b4b4b4;
-    
+    background-color: #b4b4b4;   
 }
 a{
     text-decoration: none;
     transition-duration: 2s;
+    display: block;
 }
 a:hover{
     color:black;
 }
 a:active{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 a:visited{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 a:link{
-    color: white;
-}
-.input{
-    margin-top: 1vw;
-}
-#buttons-form{
-    margin-top: 1vw;
-    
-}
-.btnforms{
-    cursor: pointer;
+    color: rgb(0, 0, 0);
 }

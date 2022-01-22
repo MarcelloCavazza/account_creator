@@ -1,0 +1,73 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#title{
+    margin-top: 2vw;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-top: 3%;
+    border-radius: 1vw;
+    color: white;
+    background-color: #151515;
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom:2vw;
+    padding-top: 1vw;
+}
+.buttons-form{
+    margin-top: 1vw;
+}
+.btnforms{
+    cursor: pointer;
+}
+#button-box{
+    margin-top: 2%;
+    height: 10%;
+    align-self: center;
+    background-color: #E99536;
+    border: none;
+    border-radius: 3vw;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 2s;
+}
+#button-box:hover{
+    background-color: #b4b4b4;   
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #E99536;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 1vw;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 2s;
+}
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover{
+    background-color: #e2ad70;
+}
+a{
+    text-decoration: none;
+    transition-duration: 2s;
+}
+a:hover{
+    color:black;
+}
+a:active{
+    color: white;
+}
+a:visited{
+    color: white;
+}
+a:link{
+    color: white;
+}

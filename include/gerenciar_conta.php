@@ -34,4 +34,4 @@ if(isset($_GET['logout']) && $_GET['logout']==1){
             }
         ?>
     </table>
-    <button><a href="?logout=1">Deslogar</a></button>
+    <button id="button-box"><a href="?logout=1">Deslogar</a></button>
